@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORM</title>
+    <style>
+        h1{
+            background-color: rgba(255, 49, 49, 0.466);
+            border: 10%;
+            margin:0%;
+            padding: 10px;
+            text-align: center;
+            border-style: double;
+        }
+        body{
+            
+            border: 500%;
+            border-style: groove;
+            padding: 5%;
+            margin: 60px;
+            text-align: center;
+            background-image: url("train.jpg");
+            background-position: center;
+            background-repeat: no-repeat;
+           background-size: contain;
+                
+
+        }
+        form{
+            text-align: center;
+           background-color: aliceblue;
+            color: black;
+            border: 200px;
+            padding: 30px;
+            margin-left: 300px;
+            margin-right: 300px;
+        }
+        
+        button{
+            color: red;
+            
+        }
+        button.hover{
+            background-color: blueviolet;
+            color: pink;
+        }
+
+    </style>
+</head>
+<body>
+    <H1>REGISTRATION FORM FOR RAILWAY RESERVATION</H1>
+    <br><br>
+    <FORM action="#" method="post">
+        <LABEL for="name">FULL NAME:</LABEL>
+        <input type="text" id="name" class="name" required>
+        <br><br>
+        <label for="age" >AGE:</label>
+        <input type="number" id="age" class="age" required>
+        <br><br>
+        <label for="gender" >GENDER:</label>
+        <input type="radio" id="male" name="gender" value="Male">
+        <label for="male"> Male</label>
+        <input type="radio" name="gender" id="female" value="Female">
+        <label for="female"> Female</label>
+        <input type="radio" name="gender" id="other" value="Other">
+        <label for="other">OTHER</label>
+        <br><br>
+        <label for="caste" >CASTE:</label>
+        <select id="caste" name="caste">
+            <option value="general">General</option>
+            <option value="obc" >OBC</option>
+            <option value="sc">SC</option>
+            <option value="st">ST</option>
+            <option value="pwd">PWD</option>
+        </select>
+        <br>
+        <br>
+         <label for="train">Select Train:</label>
+    <select id="train" name="train">
+      <option value="rajdhani">Rajdhani Express</option>
+      <option value="shatabdi">Shatabdi Express</option>
+      <option value="duronto">Duronto Express</option>
+      <option value="garibrath">Garib Rath</option>
+    </select>
+    <br><br>
+      
+    
+     <label for="date">Travel Date:</label>
+    <input type="date" id="date" name="date" required>
+    <br><br>
+    <label for="class">Class:</label>
+    <select id="class" name="class">
+      <option value="sleeper">Sleeper (SL)</option>
+      <option value="3ac">AC 3 Tier (3A)</option>
+      <option value="2ac">AC 2 Tier (2A)</option>
+      <option value="1ac">First AC (1A)</option>
+    </select>
+    <br><br>
+    <button type="submit">SUBMIT</button>
+    <button type="reset">RESET</button>
+
+    </FORM>
+</body>
+</html>
