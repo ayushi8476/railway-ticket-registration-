@@ -1,105 +1,166 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FORM</title>
-    <style>
-        h1{
-            background-color: rgba(255, 49, 49, 0.466);
-            border: 10%;
-            margin:0%;
-            padding: 10px;
-            text-align: center;
-            border-style: double;
-        }
-        body{
-            
-            border: 500%;
-            border-style: groove;
-            padding: 5%;
-            margin: 60px;
-            text-align: center;
-            background-image: url("train.jpg");
-            background-position: center;
-            background-repeat: no-repeat;
-           background-size: contain;
-                
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FORM</title>
+  <style>
+    /* Reset default margin/padding */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
 
-        }
-        form{
-            text-align: center;
-           background-color: aliceblue;
-            color: black;
-            border: 200px;
-            padding: 30px;
-            margin-left: 300px;
-            margin-right: 300px;
-        }
-        
-        button{
-            color: red;
-            
-        }
-        button.hover{
-            background-color: blueviolet;
-            color: pink;
-        }
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background-image: url("train.jpg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      padding: 20px;
+    }
 
-    </style>
+    h1 {
+      background: rgba(255, 49, 49, 0.7);
+      color: white;
+      padding: 15px;
+      text-align: center;
+      border-radius: 10px;
+      border: 3px double white;
+      animation: fadeDown 1s ease-in-out;
+    }
+
+    form {
+      margin-top: 20px;
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(10px);
+      border-radius: 15px;
+      padding: 30px;
+      width: 400px;
+      color: black;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+      animation: fadeIn 1.5s ease-in-out;
+    }
+
+    label {
+      display: block;
+      text-align: left;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      outline: none;
+      transition: 0.3s;
+    }
+
+    input:focus, select:focus {
+      border-color: crimson;
+      box-shadow: 0 0 8px rgba(220, 20, 60, 0.5);
+    }
+
+    .radio-group {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 5px;
+    }
+
+    button {
+      margin: 10px 5px;
+      padding: 10px 20px;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      font-weight: bold;
+      transition: transform 0.3s, background 0.3s;
+    }
+
+    button[type="submit"] {
+      background: crimson;
+      color: white;
+    }
+
+    button[type="reset"] {
+      background: gray;
+      color: white;
+    }
+
+    button:hover {
+      transform: scale(1.1);
+      opacity: 0.9;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.9); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    @keyframes fadeDown {
+      from { opacity: 0; transform: translateY(-50px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
 </head>
 <body>
-    <H1>REGISTRATION FORM FOR RAILWAY RESERVATION</H1>
-    <br><br>
-    <FORM action="#" method="post">
-        <LABEL for="name">FULL NAME:</LABEL>
-        <input type="text" id="name" class="name" required>
-        <br><br>
-        <label for="age" >AGE:</label>
-        <input type="number" id="age" class="age" required>
-        <br><br>
-        <label for="gender" >GENDER:</label>
-        <input type="radio" id="male" name="gender" value="Male">
-        <label for="male"> Male</label>
-        <input type="radio" name="gender" id="female" value="Female">
-        <label for="female"> Female</label>
-        <input type="radio" name="gender" id="other" value="Other">
-        <label for="other">OTHER</label>
-        <br><br>
-        <label for="caste" >CASTE:</label>
-        <select id="caste" name="caste">
-            <option value="general">General</option>
-            <option value="obc" >OBC</option>
-            <option value="sc">SC</option>
-            <option value="st">ST</option>
-            <option value="pwd">PWD</option>
-        </select>
-        <br>
-        <br>
-         <label for="train">Select Train:</label>
-    <select id="train" name="train">
-      <option value="rajdhani">Rajdhani Express</option>
-      <option value="shatabdi">Shatabdi Express</option>
-      <option value="duronto">Duronto Express</option>
-      <option value="garibrath">Garib Rath</option>
-    </select>
-    <br><br>
-      
-    
-     <label for="date">Travel Date:</label>
-    <input type="date" id="date" name="date" required>
-    <br><br>
-    <label for="class">Class:</label>
-    <select id="class" name="class">
-      <option value="sleeper">Sleeper (SL)</option>
-      <option value="3ac">AC 3 Tier (3A)</option>
-      <option value="2ac">AC 2 Tier (2A)</option>
-      <option value="1ac">First AC (1A)</option>
-    </select>
-    <br><br>
-    <button type="submit">SUBMIT</button>
-    <button type="reset">RESET</button>
+  <div>
+    <h1>REGISTRATION FORM FOR RAILWAY RESERVATION</h1>
+    <form action="#" method="post">
+      <label for="name">FULL NAME:</label>
+      <input type="text" id="name" class="name" required>
 
-    </FORM>
+      <label for="age">AGE:</label>
+      <input type="number" id="age" class="age" required>
+
+      <label>GENDER:</label>
+      <div class="radio-group">
+        <label><input type="radio" name="gender" value="Male"> Male</label>
+        <label><input type="radio" name="gender" value="Female"> Female</label>
+        <label><input type="radio" name="gender" value="Other"> Other</label>
+      </div>
+
+      <label for="caste">CASTE:</label>
+      <select id="caste" name="caste">
+        <option value="general">General</option>
+        <option value="obc">OBC</option>
+        <option value="sc">SC</option>
+        <option value="st">ST</option>
+        <option value="pwd">PWD</option>
+      </select>
+
+      <label for="train">Select Train:</label>
+      <select id="train" name="train">
+        <option value="rajdhani">Rajdhani Express</option>
+        <option value="shatabdi">Shatabdi Express</option>
+        <option value="duronto">Duronto Express</option>
+        <option value="garibrath">Garib Rath</option>
+      </select>
+
+      <label for="date">Travel Date:</label>
+      <input type="date" id="date" name="date" required>
+
+      <label for="class">Class:</label>
+      <select id="class" name="class">
+        <option value="sleeper">Sleeper (SL)</option>
+        <option value="3ac">AC 3 Tier (3A)</option>
+        <option value="2ac">AC 2 Tier (2A)</option>
+        <option value="1ac">First AC (1A)</option>
+      </select>
+
+      <button type="submit">SUBMIT</button>
+      <button type="reset">RESET</button>
+    </form>
+  </div>
 </body>
 </html>
+
